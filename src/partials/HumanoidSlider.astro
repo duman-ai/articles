@@ -1,0 +1,74 @@
+<section class="robot-slider">
+    <div class="slider-container">
+        <div class="slide-card">
+            <img id="slide-img" src="" alt="Robot Image"/>
+            <div class="slide-text" id="slide-caption"></div>
+            <div class="slide-counter" id="slide-counter"></div>
+        </div>
+        <div class="slider-controls">
+            <button onclick="changeSlide(-1)">⟨ قبلی</button>
+            <button onclick="changeSlide(1)">بعدی ⟩</button>
+        </div>
+    </div>
+</section>
+
+<script is:global>
+    const slides = [
+        {
+            img: "https://i.postimg.cc/gJJtg0xk/Atlas-hydraulic.jpg",
+            caption: `۱. ربات Atlas ساخته Boston Dynamics یکی از قدیمی‌ترین ربات‌‌های انسان‌نما که بیش از ده سال از معرفی آن می‌گذرد. در این تصویر نسخه هیدرولیک این ربات را مشاهده می‌کنید که بعدا با نسخه الکتریکی آن جایگزین شد. برای آشنایی با Atlas <a href="https://bostondynamics.com/atlas/" target="_blank">اینجا</a> را بخوانید.`
+        },
+        {
+            img: "https://i.postimg.cc/T3MSTG4C/Atlas-Electric.jpg",
+            caption: `۲. نسخه الکتریکی ربات Atlas ساخته Boston Dynamics. این نسخه از سال ۲۰۲۴ جایگزین نسخه هیدرولیکی شد.`
+        },
+        {
+            img: "https://i.postimg.cc/jSTbZztx/Tesla-Optimus.jpg",
+            caption: `۳. ربات Optimus ساخته Tesla. اولین نمونه Optimus در سال ۲۰۲۲ دمو شد. طبق ادعای ایلان ماسک این ربات در سفر SpaceX Starship به مریخ فرستاده خواهد شد! دموی Optimus را از <a href="https://youtu.be/DrNcXgoFv20?si=Jd23hmRVtNMKLO3D" target="_blank">اینجا</a> مشاهده کنید.`
+        },
+        {
+            img: "https://i.postimg.cc/zvHt1Pws/Helix-Figure-AI.png",
+            caption: `۴. ربات Helix ساخته Figure AI. توسعه این ربات نیز از سال ۲۰۲۲ آغاز شد. نسخه Helix بعد از نسخه Figure 02 در سال ۲۰۲۵ معرفی شد. از سال ۲۰۲۴ نمونه‌هایی از این ربات در کارخانه BMW مورد بهره‌برداری قرار گرفت. برای آشنایی بیشتر با این ربات <a href="https://www.figure.ai/" target="_blank">اینجا</a> را بخوانید.`
+        },
+        {
+            img: "https://i.postimg.cc/Hs7RGjBr/Apollo-Apptronik.png",
+            caption: `۵. ربات Apollo ساخته Apptronik. ربات Apollo در کارخانه بنز مورد بهره‌برداری قرار گرفته است. برای آشنایی با این ربات <a href="https://apptronik.com/apollo" target="_blank">اینجا</a> را بخوانید.`
+        },
+        {
+            img: "https://i.postimg.cc/c6qD1MXr/NEO-1X.png",
+            caption: `۶. ربات NEO ساخته شرکت نروژی 1X. شرکت OpenAI یکی از سرمایه‌گذاران توسعه این ربات انسان‌نما است. برای آشنای بیشتر با این ربات <a href="https://www.1x.tech/neo" target="_blank">اینجا</a> را بخوانید.`
+        },
+        {
+            img: "https://i.postimg.cc/y6wB3MGS/Phoenix.png",
+            caption: `۷. ربات Phoenix ساخته شرکت کانادایی Sanctuary AI. برای آشنایی بیشتر با این ربات <a href="https://www.sanctuary.ai/technology" target="_blank">اینجا</a> را بخوانید.`
+        },
+        {
+            img: "https://i.postimg.cc/j5Fgmrf6/G1-Unitree.png",
+            caption: `۸. ربات G1 ساخته شرکت چینی Unitree. نسخه G1، نسخه به‌روز شده ربات انسان‌نمای H1 است. برای آشنایی بیشتر با این ربات <a href="https://www.unitree.com/g1" target="_blank">اینجا</a> را بخوانید.`
+        },
+        {
+            img: "https://i.postimg.cc/3NS0B8Cs/digit-agility-robotics.png",
+            caption: `۹. ربات Digit ساخته Agility Robotics. این ربات در انبارهای آمازون مورد بهره‌برداری قرار گرفته است. برای آشنایی بیشتر با آن <a href="https://www.agilityrobotics.com/solution" target="_blank">اینجا</a> را بخوانید.`
+        }
+    ];
+
+    let current = 0;
+
+    function updateSlide() {
+        const img = document.getElementById("slide-img");
+        const caption = document.getElementById("slide-caption");
+        const counter = document.getElementById("slide-counter");
+
+        img.src = slides[current].img;
+        caption.innerHTML = slides[current].caption;
+        counter.innerText = `تصویر ${current + 1} از ${slides.length}`;
+    }
+
+    function changeSlide(n) {
+        current = (current + n + slides.length) % slides.length;
+        updateSlide();
+    }
+
+    // Initialize
+    updateSlide();
+</script>
