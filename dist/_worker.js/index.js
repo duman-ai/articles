@@ -1,16 +1,16 @@
 globalThis.process ??= {}; globalThis.process.env ??= {};
 import { renderers } from './renderers.mjs';
 import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_CfAiusuQ.mjs';
-import { manifest } from './manifest_DKdUJsS4.mjs';
+import { manifest } from './manifest_CCSB1bo4.mjs';
 
 const serverIslandMap = new Map();;
 
 const _page0 = () => import('./pages/humanoid.astro.mjs');
-const _page1 = () => import('./pages/lmstudio.astro.mjs');
+const _page1 = () => import('./pages/lm-studio.astro.mjs');
 const _page2 = () => import('./pages/index.astro.mjs');
 const pageMap = new Map([
-    ["src/pages/Humanoid.astro", _page0],
-    ["src/pages/LMStudio.astro", _page1],
+    ["src/pages/humanoid.astro", _page0],
+    ["src/pages/lm-studio.astro", _page1],
     ["src/pages/index.astro", _page2]
 ]);
 

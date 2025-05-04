@@ -6,7 +6,7 @@
   "exclude": [
     "/",
     "/_astro/*",
-    "/Humanoid",
-    "/LMStudio"
+    "/humanoid",
+    "/lm-studio"
   ]
 }
