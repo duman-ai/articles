@@ -1,18 +1,18 @@
 ---
 import Footer from '../components/Footer.astro';
 import Head from '../components/Head.astro';
-import dumanLogo from '../assets/logo.png';
+import Author from '../components/Author.astro';
+import DumanLogo from '../components/DumanLogo.astro';
 ---
 
 <Head />
 
 <header>
-    <img src={dumanLogo.src} alt="خبرنامه هوش‌مصنوعی دومان"
-         class="header-logo-image">
+    <DumanLogo />
     <h1>چگونه مدل‌های زبانی را به صورت لوکال اجرا کنیم؟</h1>
     <div class="post-meta">
         <span>🗓️ تاریخ انتشار: ۲۷ آوریل ۲۰۲۵</span>
-        <span>✍️ نویسنده: Pouya Esmaeili</span>
+        <Author />
     </div>
 </header>
 
