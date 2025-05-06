@@ -6,6 +6,8 @@
   "exclude": [
     "/",
     "/_astro/*",
+    "/robots.txt",
+    "/sitemap.xml",
     "/humanoid",
     "/llm-inference-configuration",
     "/lm-studio"
