@@ -49,7 +49,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 ---
 
-[How deploy on Cloudflare page](https://docs.astro.build/en/guides/deploy/cloudflare/#cloudflare-pages)
+[How to deploy on Cloudflare page](https://docs.astro.build/en/guides/deploy/cloudflare/#cloudflare-pages)
 
 ```shell
 npx astro build && npx wrangler pages deploy ./dist
