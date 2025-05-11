@@ -10,6 +10,7 @@
     "/sitemap.xml",
     "/humanoid",
     "/llm-inference-configuration",
-    "/lm-studio"
+    "/lm-studio",
+    "/prompt"
   ]
 }
