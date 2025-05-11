@@ -8,6 +8,7 @@
     "/_astro/*",
     "/robots.txt",
     "/sitemap.xml",
+    "/about",
     "/humanoid",
     "/llm-inference-configuration",
     "/lm-studio",
